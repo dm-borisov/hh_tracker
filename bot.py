@@ -36,6 +36,22 @@ chat_id = env('CHAT_ID')
 
 def send_message_to_chat(bot_token: str, chat_id: str, url: str,
                          params: dict, headers: dict | None = None):
+    """
+    Send message with vacancies to chat
+
+    Parameters
+    ----------
+    bot_token: str
+        bot token
+    chat_id: str
+        chat id where to send message
+    url: str
+        URL of the requested page
+    params: dict
+        Query parameters
+    headers: dict
+        Optional headers for the request
+    """
     method_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
     method_params = {
         "chat_id": chat_id,
