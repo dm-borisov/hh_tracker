@@ -77,7 +77,7 @@ if __name__ == '__main__':
     )
 
     date_diff: datetime = datetime.now() - timedelta(minutes=10)
-    date_from: str = date_diff.strftime("%Y-%m-%dT%H:%MV")
+    date_from: str = date_diff.strftime("%Y-%m-%dT%H:%M")
 
     params: dict = {
         "text": text,
